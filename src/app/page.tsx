@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="">
       {/* hero section */}
-      <div className="w-full h-[80vh] min-h-[500px] bg-[url('/images/hero.jpg')] bg-cover bg-center p-8">
+      <div className="w-full h-[80vh] min-h-[500px] bg-[url('/images/heropic.jpg')] bg-cover bg-center p-8">
         <div>
           <div className="w-[80%] max-w-[600px] sm:w-[60%] bg-bluey-black/90 p-8 rounded-md text-off-white">
             <h1 className="font-bold text-2xl max-w-[20ch] md:max-w-[40ch]">Football Coaching for children in Norwich</h1>
