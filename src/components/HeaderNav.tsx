@@ -2,9 +2,15 @@
 import { headerNav } from "@/lib/navigations";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import {motion} from "framer-motion"
+import { useState } from "react";
 
 export default function HeaderNav() {
+  
   const pathname = usePathname()
+  const [toggleNav, setToggleNav] = useState(false)
+
+
   return (
     <>
       <ul className="hidden lg:flex gap-8 absolute bottom-4 left-[50%] translate-x-[-50%]">
@@ -17,7 +23,73 @@ export default function HeaderNav() {
             )
           })}
       </ul>
+      <div className="lg:hidden">
+        {/* burger bars */}
+        <motion.div 
+          className="w-8 h-8 mt-2 md:mt-4 group cursor-pointer relative"
+          animate={toggleNav ? "open" : "close"}  
+          onClick={() => setToggleNav(!toggleNav)}
+          initial={false}
+        >
+          {/* top bar */}
+          <motion.div 
+            className="w-full h-[6px] bg-primary-accent group-hover:bg-off-white absolute transition-colors duration-300"
+            style={{
+              top: "0%",
+              y: "0%",
+              rotate: "0deg"
+            }}
+            variants={{
+              open: {
+                top: ["0%","50%", "50%"],
+                y: ["0%", "-50%", "-50%"],
+                rotate: ["0deg", "0deg", "45deg"]
+              },
+              close: {
+                top: ["50%","50%", "0%"],
+                y: ["-50%", "-50%", "0%"],
+                rotate: ["45deg", "0deg", "0deg"]
+              }
+            }}
+          />
+          {/* middle bar */}
+          <motion.div 
+            className="w-full h-[6px] bg-primary-accent group-hover:bg-off-white absolute transition-colors duration-300"
+            style={{
+              top: "50%",
+              y: "-50%",
+              rotate: "0deg"
+            }}
+            variants={{
+              open: {rotate: ["0deg", "0deg", "45deg"]},
+              close: {rotate: ["45deg", "0deg", "0deg"]}
+            }}
+          />
+          {/* bottom bar */}
+          <motion.div 
+            className="w-full h-[6px] bg-primary-accent group-hover:bg-off-white absolute transition-colors duration-300"
+            style={{
+              top: "100%",
+              y: "-100%",
+              rotate: "0deg",
+            }}
+            variants={{
+              open: {
+                top: ["100%" ,"50%", "50%"],
+                y: ["-100%" ,"-50%", "-50%"],
+                rotate: ["0deg" ,"0deg", "-45deg"],
+              },
+              close: {
+                top: ["50%" ,"50%", "100%"],
+                y: ["-50%" ,"-50%", "-100%"],
+                rotate: ["-45deg" ,"0deg", "0deg"],
+              },
+            }}
+          />
+        </motion.div>
 
+
+      </div>
     </>
   )
 }
