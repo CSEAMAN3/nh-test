@@ -26,7 +26,7 @@
   --color-grassroots: var(--grassroots);
   --color-pitch-light: var(--pitch-light);
   --color-pitch-mid: var(--pitch-mid);
-  --color-off-white: var(--off-whtie);
+  --color-off-white: var(--off-white);
   --color-nh-grey: var(--nh-gray);
   --color-bluey-black: var(--bluey-black);
   --color-electric-orange: var(--electric-orange);
@@ -40,7 +40,7 @@
   }
 } */
 
-html {
+body{
   background: var(--off-white);
   font-family: var(--font-hanken-grotesk);
 }
