@@ -19,7 +19,7 @@ export function ModalProvider({ children }: { children: ReactNode }) {
     <ModalContext.Provider value={{ open, close }}>
       {children}
       {isOpen && (
-        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center">
+        <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center">
           <div className="bg-white p-6 rounded-lg w-full max-w-md shadow-lg">
             <h2 className="text-xl text-primary font-bold mb-4">Book Your First Session</h2>
             {/* Insert your Calendly embed or form here */}

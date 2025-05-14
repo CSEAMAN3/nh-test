@@ -24,9 +24,39 @@ export default function HeaderNav() {
           })}
       </ul>
       <div className="lg:hidden">
+        {/* burger nav */}
+        <motion.div animate={toggleNav ? "open" : "close"}>
+            <motion.div 
+              className="bg-pitch-mid h-screen fixed top-0 right-0 overflow-y-scroll"
+              style={{
+                width: "0vw"
+              }}
+              variants={{
+                open: {
+                  width: "70vw"
+                },
+                close: {
+                  width: "0vw"
+                }
+              }}
+            >
+              <nav className="mt-32">
+                <ul className="px-8">
+                  {headerNav.map(link => {
+                    const isActive = pathname === link.href
+                    return (
+                      <li key={link.href} className="mb-8 w-fit">
+                        <Link href={link.href} className={`font-bold text-3xl ${isActive ? "text-electric-orange hover:text-electric-orange" : "text-primary-accent hover:text-electric-orange"}`}>{link.title}</Link>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </nav>
+            </motion.div>
+        </motion.div>
         {/* burger bars */}
         <motion.div 
-          className="w-8 h-8 mt-2 md:mt-4 group cursor-pointer relative"
+          className={`w-8 h-8 mt-2 md:mt-4 group cursor-pointer top-4 right-8 ${toggleNav ? "fixed" : "absolute"}`}
           animate={toggleNav ? "open" : "close"}  
           onClick={() => setToggleNav(!toggleNav)}
           initial={false}
@@ -87,8 +117,6 @@ export default function HeaderNav() {
             }}
           />
         </motion.div>
-
-
       </div>
     </>
   )

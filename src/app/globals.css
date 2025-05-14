@@ -12,6 +12,7 @@
   --bluey-black: #2a2d38;
   --electric-orange: #e86f2f;
   --electric-blue: #3a80f2;
+  --electric-orange-dark: #b84d14
 }
 
 @theme inline {
@@ -30,6 +31,7 @@
   --color-nh-grey: var(--nh-gray);
   --color-bluey-black: var(--bluey-black);
   --color-electric-orange: var(--electric-orange);
+  --color-electric-orange-dark: var(--electric-orange-dark);
   --color-electric-blue: var(--electric-blue);
 }
 

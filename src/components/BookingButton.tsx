@@ -8,7 +8,7 @@ export function BookingButton({ className = '' }: { className?: string }) {
   return (
     <button
       onClick={open}
-      className={`bg-primary-accent text-primary font-bold px-4 py-2 rounded hover:bg-electric-orange hover:text-off-white transition duration-200 ${className}`}
+      className={`font-bold rounded transition duration-200 cursor-pointer ${className}`}
     >
       Book Your First Session
     </button>
