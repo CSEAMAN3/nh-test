@@ -1,5 +1,7 @@
 import { BookingButton } from "@/components/BookingButton";
-import { hookList, reviews } from "@/lib/lists";
+import Faq from "@/components/Faq";
+import ReviewSlider from "@/components/ReviewSlider";
+import { hookList } from "@/lib/lists";
 import Image from "next/image";
 
 
@@ -128,32 +130,51 @@ export default function Home() {
         <h3 className="font-bold italic text-3xl text-primary text-center mb-2">Trusted by parents <span className="block md:inline">throughout Norfolk</span></h3>
         <p className="font-light text-primary text-center text-lg max-w-[60ch] mx-auto">We&#39;re proud to be rated 5 stars on google by local parents who&#39;ve seen their children grow in confidence, skill and love for the game.</p>
         </div>
-        <div className="flex flex-col md:flex-row gap-8 max-w-[1200px] mx-auto">
-          {reviews.map(review => {
-            return (
-              <div key={review.name} className="flex-1">
-                <div className="flex flex-col gap-4">
-                  <Image 
-                    src={'/images/tman.webp'}
-                    alt={'profile photo'}
-                    width={400}
-                    height={400}
-                    className="w-16 h-16 object-cover rounded-full row-span-2 mx-auto"
-                  />
-                  <h6 className="font-bold text-center text-lg text-bluey-black">{review.name}</h6>
-                </div>
-                <p className="font-light text-primary text-center max-w-[40ch] mx-auto">{review.review}</p>
-                <p className="text-center text-electric-orange-dark">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-              </div>
-            )
-          })}
-        </div>
+        <ReviewSlider />
       </div>
       {/* CTA */}
-      <div className="my-32 text-primary text-center px-8">
+      <div className="py-32 text-primary text-center px-8 relative">
           <h3 className="font-bold italic text-3xl mb-2">Ready to get started?</h3>
           <p className="font-light text-lg max-w-[60ch] mx-auto mb-4">Book your child&#39;s first session today and help them build skills, confidence, and a love for the game - one kick at a time.</p>
           <BookingButton className="bg-electric-orange text-off-white hover:bg-primary hover:text-primary-accent px-8 py-4" />
+          {/* top left img */}
+          <Image 
+            src={`/images/taticarrow.svg`}
+            alt={`tactical arrow icon`}
+            width={400}
+            height={400}
+            className="w-16 md:w-24 absolute top-8 sm:top-16 md:top-12 left-[5vw] sm:left-[10vw] md:left-[10vw] rotate-90"
+          />
+          {/* top right img */}
+          <Image 
+            src={`/images/taticarrow.svg`}
+            alt={`tactical arrow icon`}
+            width={400}
+            height={400}
+            className="w-16 md:w-24 absolute top-8 sm:top-16 md:top-12 right-[5vw] sm:right-[10vw] md:right-[10vw] rotate-160"
+          />
+          {/* bottom left img */}
+          <Image 
+            src={`/images/taticarrow.svg`}
+            alt={`tactical arrow icon`}
+            width={400}
+            height={400}
+            className="w-16 md:w-24 absolute bottom-8 sm:bottom-16 md:bottom-12 left-[5vw] sm:left-[10vw] md:left-[10vw] rotate-340"
+          />
+          {/* bottom right img */}
+          <Image 
+            src={`/images/taticarrow.svg`}
+            alt={`tactical arrow icon`}
+            width={400}
+            height={400}
+            className="w-16 md:w-24 absolute bottom-8 sm:bottom-16 md:bottom-12 right-[5vw] sm:right-[10vw] md:right-[10vw] rotate-260"
+          />
+      </div>
+      {/* FAQ Section */}
+      <div className="p-8">
+        <h3 className="text-primary font-bold text-3xl italic text-center mb-2">Frequently Asked Questions</h3>
+        <p className="text-primary font-light text-lg text-center mb-8">Here&#39;s everything parents usually want to know before getting started.</p>
+        <Faq />
       </div>
     </main>
   );

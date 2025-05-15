@@ -3,12 +3,32 @@ import { headerNav } from "@/lib/navigations";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {motion} from "framer-motion"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function HeaderNav() {
   
   const pathname = usePathname()
   const [toggleNav, setToggleNav] = useState(false)
+  const [navWidth, setNavWidth] = useState("100vw")
+
+  useEffect(() => {
+    const updateNavWidth = () => {
+      if(window.innerWidth < 540) {
+        setNavWidth("100vw")
+      } else if(window.innerWidth < 700){
+        setNavWidth("65vw")
+      } else if(window.innerWidth < 900) {
+        setNavWidth("55vw")
+      } else {
+        setNavWidth("45vw")
+      }
+    }
+
+    updateNavWidth()
+
+    window.addEventListener("resize", updateNavWidth)
+    return () => window.removeEventListener("resize", updateNavWidth)
+  }, [])
 
 
   return (
@@ -33,7 +53,7 @@ export default function HeaderNav() {
               }}
               variants={{
                 open: {
-                  width: "70vw"
+                  width: navWidth
                 },
                 close: {
                   width: "0vw"

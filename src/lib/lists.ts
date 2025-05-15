@@ -18,18 +18,21 @@ export const hookList = [
 
 export const reviews = [
   {
+    id: 1,
     review: "My son was so nervous at first, but now he counts down the days to his next session. His confidence has grown massively.",
     name: "Emma Crow",
-    img: "/images/emmacrow.jpg",
+    img: "tman.webp",
   },
   {
+    id: 2,
     review: "The sessions are really well run and feel personal. My daughter feels seen, supported, and always comes home smiling.",
     name: "Paul Redmond",
-    img: "/images/paulredmond.jpg",
+    img: "tman.webp",
   },
   {
+    id: 3,
     review: "We've tried other clubs, but nothing clicked like this. The small group format is perfect for us, we love our NHFC sessions.",
     name: "Priya Mahmoon",
-    img: "/images/priyamahmoon.jpg",
+    img: "tman.webp",
   },
 ]
