@@ -5,7 +5,8 @@ import { BookingButton } from "./BookingButton";
 
 export default function Header() {
   return (
-    <header className="bg-primary px-8 py-4 relative flex justify-between z-50">
+    <header className="bg-primary z-50">
+      <div className="px-8 py-4 relative flex justify-between max-w-[1200px] mx-auto">
       <Link href={"/"}>
         <Image 
           src={`/images/nhfc_logo_horizontal_wordmark.svg`}
@@ -17,8 +18,9 @@ export default function Header() {
         />
       </Link>
       <div className="flex">
-      <BookingButton className="cursor-pointer hidden md:block mr-12 bg-primary-accent text-primary hover:bg-electric-orange hover:text-off-white px-4 py-2" />
+      <BookingButton className="cursor-pointer hidden md:block md:mr-12 lg:mr-0 bg-primary-accent text-primary hover:bg-electric-orange hover:text-off-white px-4 py-2" />
       <HeaderNav />
+      </div>
       </div>
     </header>
   )

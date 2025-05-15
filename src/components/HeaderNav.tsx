@@ -32,7 +32,7 @@ export default function HeaderNav() {
 
 
   return (
-    <>
+    <div className="z-50">
       <ul className="hidden lg:flex gap-8 absolute bottom-4 left-[50%] translate-x-[-50%]">
           {headerNav.map(link => {
             const isActive = pathname === link.href
@@ -138,6 +138,6 @@ export default function HeaderNav() {
           />
         </motion.div>
       </div>
-    </>
+    </div>
   )
 }
