@@ -2,19 +2,19 @@ import { Nav } from "../../types";
 
 export const headerNav : Nav[] = [
   {
-    href: "about-nhfc",
+    href: "/about-nhfc",
     title: "About NHFC",
   },
   {
-    href: "our-sessions",
+    href: "/our-sessions",
     title: "Our Sessions",
   },
   {
-    href: "blog",
+    href: "/blog",
     title: "Blog",
   },
   {
-    href: "contact",
+    href: "/contact",
     title: "Contact",
   },
 ]

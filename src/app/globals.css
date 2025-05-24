@@ -46,3 +46,34 @@ body{
   background: var(--off-white);
   font-family: var(--font-hanken-grotesk);
 }
+
+.shape {
+  clip-path: polygon(8% 0%, 0% 100%, 100% 100%, 100% 0%);
+}
+
+.fullshape {
+  clip-path: polygon(8% 0%, 0% 100%, 92% 100%, 100% 0%);
+}
+
+.svgcolor{
+  color: #373d12;
+}
+
+@media(min-width: 900px){
+  .flexing{
+    flex-direction: row;
+  }
+  .centering{
+    align-self: center;
+    place-items: center;
+  }
+  .aligning{
+    align-self: auto;
+  }
+}
+
+/* @media(min-width: 1200px){
+  .fullshape {
+    clip-path: polygon(8% 0%, 0% 100%, 92% 100%, 100% 0%);
+  }
+} */

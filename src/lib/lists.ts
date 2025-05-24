@@ -1,18 +1,27 @@
 export const hookList = [
   {
-    graphic: "/images/confidencePlayers.svg",
-    title: "Confidence First",
-    content: "We focus on building self-belief through positive coaching."
+    // graphic: "/images/confidencePlayers.svg",
+    // title: "Confidence First",
+    // content: "We focus on building self-belief through positive coaching."
+    title: "Believing",
+    content: "We help children believe in themselves, on and off the pitch.",
+    icon: "FaBoltLightning"
   },
   {
-    graphic: "/images/inclusivePlayers.svg",
-    title: "Inclusive by Nature",
-    content: "Every child is welcome, no matter their starting point or skill level."
+    // graphic: "/images/inclusivePlayers.svg",
+    // title: "Inclusive by Nature",
+    // content: "Every child is welcome, no matter their starting point or skill level."
+    title: "Belonging",
+    content: "We welcome every child, everyone's part of the team here.",
+    icon: "FaBoltLightning"
   },
   {
-    graphic: "/images/groupPlayers.svg",
-    title: "Small Group Focus",
-    content: "1-2-1 and 1-2-2 coaching means more attention & faster progress."
+    // graphic: "/images/groupPlayers.svg",
+    // title: "Small Group Focus",
+    // content: "1-2-1 and 1-2-2 coaching means more attention & faster progress."
+    title: "Caring",
+    content: "Every player feels seen, supported, and set up for success.",
+    icon: "FaBoltLightning"
   },
 ]
 
@@ -21,7 +30,7 @@ export const reviews = [
     id: 1,
     review: "My son was so nervous at first, but now he counts down the days to his next session. His confidence has grown massively.",
     name: "Emma Crow",
-    img: "tman.webp",
+    img: "val.jpg",
   },
   {
     id: 2,
@@ -33,7 +42,7 @@ export const reviews = [
     id: 3,
     review: "We've tried other clubs, but nothing clicked like this. The small group format is perfect for us, we love our NHFC sessions.",
     name: "Priya Mahmoon",
-    img: "tman.webp",
+    img: "louise.jpg",
   },
 ]
 

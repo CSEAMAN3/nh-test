@@ -36,9 +36,10 @@ export default function HeaderNav() {
       <ul className="hidden lg:flex gap-8 absolute bottom-4 left-[50%] translate-x-[-50%]">
           {headerNav.map(link => {
             const isActive = pathname === link.href
+            console.log(isActive)
             return (
               <li key={link.href}>
-                <Link href={link.href} className={`font-bold text-lg ${isActive ? "text-grassroots hover:text-grassroots" : "text-primary-accent hover:text-off-white"} transition-all duration-200`}>{link.title}</Link>
+                <Link href={link.href} className={`font-bold text-lg ${isActive ? "text-off-white hover:text-off-white" : "text-primary-accent hover:text-off-white"} transition-all duration-200`}>{link.title}</Link>
               </li>
             )
           })}
@@ -66,7 +67,11 @@ export default function HeaderNav() {
                     const isActive = pathname === link.href
                     return (
                       <li key={link.href} className="mb-8 w-fit">
-                        <Link href={link.href} className={`font-bold text-3xl ${isActive ? "text-electric-orange hover:text-electric-orange" : "text-primary-accent hover:text-electric-orange"}`}>{link.title}</Link>
+                        <Link 
+                          href={link.href} 
+                          className={`font-bold text-3xl ${isActive ? "text-electric-orange hover:text-electric-orange" : "text-primary-accent hover:text-electric-orange"}`}
+                          onClick={() => setToggleNav(!toggleNav)}  
+                        >{link.title}</Link>
                       </li>
                     )
                   })}
