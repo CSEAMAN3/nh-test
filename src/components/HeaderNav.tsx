@@ -46,7 +46,9 @@ export default function HeaderNav() {
       </ul>
       <div className="lg:hidden">
         {/* burger nav */}
-        <motion.div animate={toggleNav ? "open" : "close"}>
+        <motion.div 
+          animate={toggleNav ? "open" : "close"}
+        >
             <motion.div 
               className="bg-pitch-mid h-screen fixed top-0 right-0 overflow-y-scroll"
               style={{
