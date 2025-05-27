@@ -54,10 +54,10 @@ export default function AboutPage() {
         <p className="font-light w-fit absolute bottom-8 right-24 text-primary">Head Coach - Noah Hunt</p>
         <RiDoubleQuotesR className="text-4xl absolute bottom-12 right-6 text-electric-orange" />
       </div>
-      <div className="flex flex-col gap-8 max-w-[1200px] mx-auto lg:mb-8">
+      <div className="flex flex-col gap-8 max-w-[1200px] mx-auto mb-8 lg:mb-24">
       {/* why we started */}
-      <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row lg:mt-8 lg:pr-8">
-        <div className="text-primary px-8 content-center flex-1">
+      <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row lg:mt-8 pl-8">
+        <div className="text-primary pr-8 content-center flex-1">
           <h2 className="font-bold text-2xl lg:text-3xl mb-2 italic">Why We Started</h2>
           <p className="mb-2 max-w-[60ch] font-light md:text-lg">Noah&#39;s passion for football runs deep. As a player for the Mulbarton First Team and head coach of the club&#39;s U18s squad, football has always been more than a game — it&#39;s been a way of life.
           </p>
@@ -68,12 +68,12 @@ export default function AboutPage() {
           alt={"image description here"}
           width={400}
           height={400}
-          className="w-full max-h-[200px] sm:max-h-[300px] lg:max-h-full object-cover flex-1"
+          className="w-full max-h-[200px] sm:max-h-[300px] lg:max-h-full object-cover flex-1 rounded-tl-full rounded-bl-full"
         />
       </div>
       {/* Our Approach */}
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 max-w-[1200px] lg:mt-8 lg:pl-8">
-        <div className="text-primary px-8 flex-1 content-center lg:order-2">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 max-w-[1200px] lg:mt-8 pr-8">
+        <div className="text-primary pl-8 flex-1 content-center lg:order-2">
           <h2 className="font-bold text-2xl lg:text-3xl mb-2 italic">Our Approach</h2>
           <p className="mb-2 max-w-[60ch] font-light md:text-lg">What makes NH Football Coaching different is the focus on small-group sessions, energy-filled training, and coaching that truly connects.
           </p>
@@ -84,7 +84,7 @@ export default function AboutPage() {
           alt={"image description here"}
           width={400}
           height={400}
-          className="w-full max-h-[200px] sm:max-h-[300px] lg:max-h-full object-cover flex-1 lg:order-1"
+          className="w-full max-h-[200px] sm:max-h-[300px] lg:max-h-full object-cover flex-1 lg:order-1 rounded-tr-full rounded-br-full"
         />
       </div>
       </div>
