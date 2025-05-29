@@ -59,6 +59,23 @@ body{
   color: #373d12;
 }
 
+li.mark {
+  position: relative;
+  display: inline-block;
+  padding-left: 32px;
+}
+
+li.mark::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 3px solid var(--color-grassroots);
+  border-radius: 100%;
+  left: 0;
+  top: 6px;
+}
+
 @media(min-width: 900px){
   .flexing{
     flex-direction: row;

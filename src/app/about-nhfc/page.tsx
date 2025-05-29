@@ -2,8 +2,8 @@
 import { BookingButton } from "@/components/BookingButton";
 import Image from "next/image";
 
-import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
-
+import Quote from "@/components/Quote";
+import CtaSection from "@/components/CtaSection";
 
 export default function AboutPage() {
 
@@ -48,12 +48,7 @@ export default function AboutPage() {
         </div>
       </div>
       {/* quote section */}
-      <div className="px-16 py-16 mx-auto w-fit relative md:mb-8">
-        <RiDoubleQuotesL className="text-4xl absolute top-12 left-6 text-electric-orange"/>
-        <p className="text-center font-bold text-pitch-light text-xl lg:text-2xl max-w-[60ch]">Whether a child is just starting out or looking to sharpen their skills, our sessions are designed to support their journey — through personalised coaching, real encouragement, and a whole lot of energy.</p>
-        <p className="font-light w-fit absolute bottom-8 right-24 text-primary">Head Coach - Noah Hunt</p>
-        <RiDoubleQuotesR className="text-4xl absolute bottom-12 right-6 text-electric-orange" />
-      </div>
+      <Quote content="Whether a child is just starting out or looking to sharpen their skills, our sessions are designed to support their journey — through personalised coaching, real encouragement, and a whole lot of energy." />
       <div className="flex flex-col gap-8 max-w-[1200px] mx-auto mb-8 lg:mb-24">
       {/* why we started */}
       <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row lg:mt-8 pl-8">
@@ -111,43 +106,7 @@ export default function AboutPage() {
         </div>
       </div>
       {/* CTA */}
-      <div className="py-32 text-primary text-center px-8 relative my-24">
-                <h3 className="font-bold italic text-3xl mb-2">Ready to get started?</h3>
-                <p className="font-light text-lg max-w-[60ch] mx-auto mb-4">Book your child&#39;s first session today and help them build skills, confidence, and a love for the game - one kick at a time.</p>
-                <BookingButton className="bg-electric-orange text-off-white hover:bg-primary hover:text-primary-accent px-8 py-4" />
-                {/* top left img */}
-                <Image 
-                  src={`/images/taticarrow.svg`}
-                  alt={`tactical arrow icon`}
-                  width={400}
-                  height={400}
-                  className="w-16 md:w-24 absolute top-8 sm:top-16 md:top-12 left-[5vw] sm:left-[10vw] md:left-[10vw] rotate-90"
-                />
-                {/* top right img */}
-                <Image 
-                  src={`/images/taticarrow.svg`}
-                  alt={`tactical arrow icon`}
-                  width={400}
-                  height={400}
-                  className="w-16 md:w-24 absolute top-8 sm:top-16 md:top-12 right-[5vw] sm:right-[10vw] md:right-[10vw] rotate-160"
-                />
-                {/* bottom left img */}
-                <Image 
-                  src={`/images/taticarrow.svg`}
-                  alt={`tactical arrow icon`}
-                  width={400}
-                  height={400}
-                  className="w-16 md:w-24 absolute bottom-8 sm:bottom-16 md:bottom-12 left-[5vw] sm:left-[10vw] md:left-[10vw] rotate-340"
-                />
-                {/* bottom right img */}
-                <Image 
-                  src={`/images/taticarrow.svg`}
-                  alt={`tactical arrow icon`}
-                  width={400}
-                  height={400}
-                  className="w-16 md:w-24 absolute bottom-8 sm:bottom-16 md:bottom-12 right-[5vw] sm:right-[10vw] md:right-[10vw] rotate-260"
-                />
-            </div>
+      <CtaSection />
     </main>
   //   <main className="min-h-screen">
   //   <div className="bg-primary mb-8">
