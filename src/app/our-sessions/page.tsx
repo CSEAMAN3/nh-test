@@ -82,12 +82,12 @@ export default function SessionsPage() {
         <div className="md:flex mb-8">
           <div className="text-primary px-8 md:py-8 flex flex-col place-content-center md:max-w-[50%] md:min-w-[50%]">
             <h2 className="font-bold text-2xl lg:text-3xl italic mb-2">Who&#39;s it for</h2>
-            <p className="font-light mb-4">To get the best out of young players our coaching ethos is centered around:</p>
+            <p className="font-light mb-4">We coach children aged 6-14, across all experience levels. We welcome players who:</p>
             <ul className="font-light grid grid-cols-1 gap-4 mb-8 md:mb-0">
-              <li className="mark">Support - Mistakes are part of learning.</li>
-              <li className="mark">Energy - Sessions are high tempo, fun and motivating.</li>
-              <li className="mark">Focus - Small groups mean deeper learning and real understanding.</li>
-              <li className="mark">Player centered - We coach the person as well as the footballer.</li>
+              <li className="mark">Want to build thier skills in a calm, focused environment.</li>
+              <li className="mark">Might not enjoy large group training.</li>
+              <li className="mark">Are looking to take thier game to the next level.</li>
+              <li className="mark">Need support growing confidence and understanding the game.</li>
             </ul>
           </div>
           <div className="flex-1">
